@@ -14,7 +14,7 @@ typedef struct cidade
 
 typedef struct cromossomo
 {
-    double custo;
+    double custo; //QUANTO MENOR MELHOR
     cidade cidades[N_CIDADES];
 } cromossomo;
 
@@ -34,7 +34,7 @@ int main(int argc, char const *argv[])
 
     //Começo das iterações...
 
-    
+
 
 
     imprimirPopulacao(populacao);
