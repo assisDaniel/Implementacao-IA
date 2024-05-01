@@ -57,20 +57,21 @@ int main(int argc, char const *argv[])
 
 //Função de avaliação
 void avaliar(cromossomo populacao[]) {
-
+    int j;
 
     for (size_t i = 0; i < POPULACAO; i++)
     {
         double distanciaTotal = 0;
 
-        for (size_t j = 0; j < N_CIDADES -1; j++)
+        for ( j = 0; j < N_CIDADES -1; j++)
         {
             distanciaTotal += distancia(populacao[i].cidades[j], populacao[i].cidades[j + 1]);
         }
+
+        distanciaTotal += distancia(populacao[i].cidades[0], populacao[i].cidades[j + 1]);//Distancia da ultima cidade até a inicial
         populacao[i].custo = distanciaTotal;
-
     }
-
+    
 }
 
 //Calcula distancia entre duas cidades
